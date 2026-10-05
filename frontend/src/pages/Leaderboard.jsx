@@ -39,7 +39,7 @@ export default function Leaderboard() {
   }, []);
 
   return (
-    <div className="w-full h-full bg-[#09090b] text-white p-8 flex flex-col items-center">
+    
       <div className="w-full max-w-2xl bg-[#121214] border border-white/10 rounded-2xl p-6 shadow-2xl">
         <h2 className="text-3xl font-bold text-center mb-8 text-[#facc15]">Top Coders Arena</h2>
         
@@ -80,6 +80,5 @@ export default function Leaderboard() {
           </button>
         </div>
       </div>
-    </div>
   );
 }
