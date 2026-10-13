@@ -4,15 +4,29 @@
 
 @layer base {
   body {
-    /* Tailwind directive; processed by PostCSS/Tailwind. */
-    /* stylelint-disable-next-line at-rule-no-unknown */
-    @apply bg-arena-dark text-white font-sans antialiased;
-    overflow-x: hidden; 
+    @apply bg-lc-bg text-lc-text font-sans antialiased;
+    overflow-x: hidden;
+  }
+
+  h1, h2, h3, h4 {
+    @apply font-display;
   }
 }
 
-/* VS Code jaisa dark scrollbar */
-::-webkit-scrollbar { width: 8px; height: 8px; }
-::-webkit-scrollbar-track { background: #0f172a; }
-::-webkit-scrollbar-thumb { background: #334155; border-radius: 4px; }
-::-webkit-scrollbar-thumb:hover { background: #475569; }
+/* LeetCode-style scrollbar */
+::-webkit-scrollbar { width: 6px; height: 6px; }
+::-webkit-scrollbar-track { background: #1a1a1a; }
+::-webkit-scrollbar-thumb { background: #3e3e3e; border-radius: 3px; }
+::-webkit-scrollbar-thumb:hover { background: #5a5a5a; }
+
+/* Smooth transitions */
+* { transition-property: color, background-color, border-color; transition-duration: 150ms; }
+
+/* Problem description HTML styles (from LeetCode API) */
+.problem-content p { @apply mb-3 text-lc-text leading-relaxed; }
+.problem-content pre { @apply bg-[#333] rounded p-3 my-3 font-mono text-sm overflow-x-auto; }
+.problem-content code { @apply font-mono text-[#ffa116] bg-[#333] px-1 py-0.5 rounded text-sm; }
+.problem-content strong { @apply text-white font-semibold; }
+.problem-content ul { @apply list-disc list-inside space-y-1 my-2; }
+.problem-content ol { @apply list-decimal list-inside space-y-1 my-2; }
+.problem-content sup { @apply text-xs; }

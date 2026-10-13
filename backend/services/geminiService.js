@@ -1,42 +1,40 @@
 const { GoogleGenAI } = require('@google/genai');
 
-
 const ai = new GoogleGenAI({ apiKey: process.env.GEMINI_API_KEY });
 
-async function generateQuestion() {
-    const promptText = `
-    Act as an expert competitive programming platform.
-    Generate a random data structures and algorithms coding question (Easy or Medium difficulty).
-    Return strictly in JSON format with the following structure without any markdown ticks:
-    {
-        "title": "Question Title",
-        "difficulty": "Easy",
-        "description": "Full problem description here.",
-        "testCases": [
-            { "input": "...", "output": "..." },
-            { "input": "...", "output": "..." }
-        ]
-    }
-    `;
+const MODELS = ['gemini-3.8-flash', 'gemini-2.5-flash-preview-05-20'];
 
-    try {
-        
-        const interaction = await ai.interactions.create({
-            model: "gemini-3.8-flash",
-            input: promptText
-        });
+async function evaluateCode(code, problem) {
+    const prompt = `
+You are a strict code judge for a competitive programming platform.
 
-     
-        let responseText = interaction.output_text;
-        
-       
-        responseText = responseText.replace(/```json/g, '').replace(/```/g, '').trim();
-        
-        return JSON.parse(responseText);
-    } catch (error) {
-        console.error("Gemini API Error:", error);
-        return null;
+Problem Title: ${problem.title}
+Problem Description: ${problem.description}
+
+User's submitted code:
+\`\`\`
+${code}
+\`\`\`
+
+Evaluate this code. Reply STRICTLY in this JSON format with no markdown ticks:
+{
+  "isCorrect": true or false,
+  "verdict": "Accepted" or "Wrong Answer" or "Incomplete Solution",
+  "feedback": "One short sentence of feedback."
+}
+`;
+
+    for (const model of MODELS) {
+        try {
+            const response = await ai.models.generateContent({ model, contents: prompt });
+            const text = response.text.replace(/```json/g, '').replace(/```/g, '').trim();
+            return JSON.parse(text);
+        } catch (err) {
+            console.error(`Gemini model ${model} failed:`, err.message);
+        }
     }
+
+    return { isCorrect: false, verdict: 'Error', feedback: 'Could not evaluate. Please try again.' };
 }
 
-module.exports = { generateQuestion };
+module.exports = { evaluateCode };

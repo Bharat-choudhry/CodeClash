@@ -19,8 +19,8 @@ export default function Register() {
       })
       const data = await response.json();
       if(response.ok){
-        alert(data.message);
-        navigate('/dashboard');
+        alert(data.message + " Please log in to continue.");
+        navigate('/login');
       } else {
         alert(data.message || "Registration failed");
       }
