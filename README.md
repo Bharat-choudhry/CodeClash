@@ -59,8 +59,8 @@ Live leaderboard popup during contests showing instant submission status and cur
 
 ###6 .Leaderboard-
 
-![laaderboard](<img width="2940" height="1912" alt="5C7271C6-A5D8-464D-93B1-06B24E410D54" src="https://github.com/user-attachments/assets/d65fe72a-27e3-4aa1-b5ad-372090580941" />
-)
+<img width="2940" height="1912" alt="5C7271C6-A5D8-464D-93B1-06B24E410D54" src="https://github.com/user-attachments/assets/ea5ddc81-9562-403b-b05f-1c1e76c4dd8d" />
+
 
 --------
 
