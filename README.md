@@ -48,13 +48,16 @@ Live leaderboard popup during contests showing instant submission status and cur
 
 ---
 
-###5 .dashboard-
+###5 .DESHBOARD-
   
- 1.![join Room](<img width="2940" height="1912" alt="2E6345EE-754B-499A-80B3-863C5F7DE0E5" src="https://github.com/user-attachments/assets/4ff8f438-5553-4ed0-895b-d786d371d0c6" />
-)
+ 1.join Room-
+ <img width="2940" height="1912" alt="2E6345EE-754B-499A-80B3-863C5F7DE0E5" src="https://github.com/user-attachments/assets/7d66e225-c862-41e2-889e-3ae6860118bc" />
 
-2.![create Room](<img width="2940" height="1912" alt="D029B8D2-446C-4203-A048-14930C22F4A4" src="https://github.com/user-attachments/assets/a8d3334f-db7d-425a-9c99-cd01fca6ac1e" />
-)
+
+
+2.![create Room]
+<img width="2940" height="1912" alt="D029B8D2-446C-4203-A048-14930C22F4A4" src="https://github.com/user-attachments/assets/a8d3334f-db7d-425a-9c99-cd01fca6ac1e" />
+
 -----
 
 ###6 .Leaderboard-
@@ -67,8 +70,8 @@ Live leaderboard popup during contests showing instant submission status and cur
 
 ###profile -
 
-![profile](<img width="2940" height="1912" alt="91F71177-8981-4BE8-AE23-575A75AD28D7" src="https://github.com/user-attachments/assets/6816f672-e66f-416c-b976-5fdcf5e1a6b4" />
-)
+<img width="2940" height="1912" alt="91F71177-8981-4BE8-AE23-575A75AD28D7" src="https://github.com/user-attachments/assets/6816f672-e66f-416c-b976-5fdcf5e1a6b4" />
+
 
 
 ## 🌟 Key Features
