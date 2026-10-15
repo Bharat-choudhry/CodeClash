@@ -21,8 +21,8 @@ JWT-based authentication with bcrypt-secured credentials and duplicate validatio
 <p align="center">
   <img width="2940" height="1912" alt="8B40A46E-6D90-493C-A5B1-E962A19F691A" src="https://github.com/user-attachments/assets/87e162d0-3e17-4c26-b146-07f8bc985cc0" />
 
-  <img src="screenshots/register.png" width="48%" alt="Register Page" />
-  <img width="2940" height="1912" alt="FBE6A6DF-4521-411A-A819-BE3778E55E4C" src="https://github.com/user-attachments/assets/d9bd0411-d340-4b6e-a42d-6f970a529023" />
+  <img src="width="2940" height="1912" alt="FBE6A6DF-4521-411A-A819-BE3778E55E4C" src="https://github.com/user-attachments/assets/d9bd0411-d340-4b6e-a42d-6f970a529023" alt="Register Page" />
+  
 
 </p>
 
